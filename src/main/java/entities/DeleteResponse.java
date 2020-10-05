@@ -5,11 +5,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
-    private long id;
-    private String name;
+public class DeleteResponse {
+    private int code;
+    private String type;
+    private String message;
 }
