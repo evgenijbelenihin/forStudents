@@ -115,6 +115,4 @@ public class APITests {
                 .assertThat()
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("main/java/data/json/schema.json"));
     }
-
-
 }
