@@ -51,7 +51,17 @@ public class APITests {
 
     @Test
     public void addPetToTheStore() {
-        Pet newPet = new Pet().createPet();
+//        Preparing test data
+        Category dogs = new Category(1, "dogs");
+        Category patrol = new Category(43, "patrol");
+
+        Pet newPet = new Pet(
+                100000 + (long) (Math.random() * 999999),
+                dogs,
+                "Crazy " + RandomStringUtils.randomAlphabetic(5),
+                Collections.singletonList("urls"),
+                Arrays.asList(dogs, patrol),
+                Statuses.AVAILABLE.name());
 
 //        Tests
         Response responseAddPet = given()
